@@ -1,0 +1,16 @@
+{
+	"params":
+	{
+		"local_server":"True",
+		"local_uri":"sqlite:///ilearn.db",
+		"prod_uri":"sqlite:///ilearn.db",
+		"fb_url":"https://facebook.com/ilearn",
+		"tw_url":"https://twitter.com/ilearn",
+		"gh_url":"https://github.com/ilearn",
+		"num_of_posts":2,
+		"admin_user":"anuj",
+		"admin_password":"letslearn",
+		"upload_location": "//home//anuj//Program//flask_backend//static//assets//img//",
+		"posted_by":"iLEARN"
+	}
+}

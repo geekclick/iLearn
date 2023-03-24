@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+{% block body %}
+    
+    <!-- Page Header-->
+    <header class="masthead" style="background-image: url('{{ url_for('static', filename='assets/img/home-bg.jpg')}}')">
+        <div class="container position-relative px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <div class="site-heading">
+                        <h1>Add/Edit Post</h1>
+                        <span class="subheading">A Learning Platform For Geeky Students</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Main Content-->
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <h1>Add/Edit Post</h1>
+                
+                <form action="/edit/{{sno}}" method="post">
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" class="form-control" id="title" name="title" placeholder="Enter Title" value="{{post.title}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="subtitle">Subtitle</label>
+                        <input type="text" class="form-control" id="subtitle" name="subtitle" placeholder="Enter Subtitle" value="{{post.desc}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="content">Content</label>
+                        <textarea rows = "5" cols = "60" class="form-control" id="content" name="content" placeholder="Enter Content">{{post.content}}</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="slug">Slug</label>
+                        <input type="text" class="form-control" id="slug" name="slug" placeholder="Enter Slug" value="{{post.slug}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="img_file">Image File Name</label>
+                        <input type="text" class="form-control" id="img_file" name="img_file" placeholder="Enter Image File Name" value="{{post.img_file}}">
+                    </div>
+                    
+                    <!-- <div class="form-group form-check"> -->
+                    <!-- <input type="checkbox" class="form-check-input" id="exampleCheck1"> -->
+                    <!-- <label class="form-check-label" for="exampleCheck1">Check me out</label> -->
+                    <!-- </div> -->
+                    <button type="submit" class="btn btn-primary" style="margin-top: 1rem;">Submit</button>
+                </form>
+                
+                <!-- Pager-->
+                <!-- <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div> -->
+            </div>
+        </div>
+    </div>
+    
+{% endblock %}
